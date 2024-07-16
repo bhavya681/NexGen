@@ -187,7 +187,7 @@ import NoteMaker from "../components/NoteMaker";
 import ScreenshotTaker from "../components/ScreenShotTaker";
 import WeatherWidget from "../components/WeatherWidget";
 
-const apiKey = "6a2ce03436f44cb992c55245e839694f";
+const apiKey = process.env.REACT_APP_NEWS_API_KEY;
 const initialUrl = `https://newsapi.org/v2/top-headlines?country=in&apiKey=${apiKey}`;
 
 const HomePage = () => {
@@ -213,7 +213,7 @@ const HomePage = () => {
 
   const fetchAdditionalContent = async () => {
     try {
-      const response = await fetch(initialUrl); // Using the same initialUrl for additional content
+      const response = await fetch(initialUrl);
       const data = await response.json();
       if (data.articles && data.articles.length > 0) {
         setAdditionalContent(data.articles);
