@@ -45,7 +45,7 @@
 
 import React, { useEffect, useState } from 'react';
 
-const apiKey = process.env.REACT_APP_NEWS_API_KEY; // Ensure you set this in your environment variables
+const apiKey = "6a2ce03436f44cb992c55245e839694f";
 const apiUrl = `https://newsapi.org/v2/everything?q=olympics&language=en&sortBy=publishedAt&apiKey=${apiKey}`;
 
 const TechCrunchNewsPage = () => {

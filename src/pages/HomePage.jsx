@@ -187,7 +187,7 @@ import NoteMaker from "../components/NoteMaker";
 import ScreenshotTaker from "../components/ScreenShotTaker";
 import WeatherWidget from "../components/WeatherWidget";
 
-const apiKey = process.env.NEWS_API_KEY; // Use environment variable for API key
+const apiKey = "6a2ce03436f44cb992c55245e839694f";
 const initialUrl = `https://newsapi.org/v2/top-headlines?country=in&apiKey=${apiKey}`;
 
 const HomePage = () => {
