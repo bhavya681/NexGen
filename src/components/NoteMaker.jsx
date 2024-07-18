@@ -1,13 +1,13 @@
-import React, { useState } from 'react';
+import React, { useState } from "react";
 
 const NoteMaker = () => {
   const [notes, setNotes] = useState([]);
-  const [currentNote, setCurrentNote] = useState('');
+  const [currentNote, setCurrentNote] = useState("");
 
   const handleAddNote = () => {
     if (currentNote.trim()) {
       setNotes([...notes, currentNote]);
-      setCurrentNote('');
+      setCurrentNote("");
     }
   };
 
@@ -22,12 +22,12 @@ const NoteMaker = () => {
       <textarea
         value={currentNote}
         onChange={(e) => setCurrentNote(e.target.value)}
-        className="w-full p-2 mb-4 bg-green-600 rounded-lg"
+        className="w-full p-2 mb-4 bg-green-600 rounded-lg text-white"
         placeholder="Write your note here..."
       />
       <button
         onClick={handleAddNote}
-        className="bg-blue-700 px-4 py-2 rounded-lg hover:bg-blue-800 transition-colors"
+        className="bg-blue-700 px-4 py-2 rounded-lg hover:bg-blue-800 transition-colors text-white"
       >
         Add Note
       </button>
@@ -35,11 +35,14 @@ const NoteMaker = () => {
         <h3 className="text-xl font-bold mb-2">Your Notes</h3>
         <ul>
           {notes.map((note, index) => (
-            <li key={index} className="mb-2 p-3 bg-green-600 rounded-lg flex justify-between items-center">
-              <span>{note}</span>
+            <li
+              key={index}
+              className="mb-2 p-3 bg-green-600 rounded-lg flex justify-between items-center"
+            >
+              <span className="text-white">{note}</span>
               <button
                 onClick={() => handleDeleteNote(index)}
-                className="bg-red-600 px-2 py-1 rounded-lg hover:bg-red-700 transition-colors"
+                className="bg-red-600 px-2 py-1 rounded-lg hover:bg-red-700 transition-colors text-white"
               >
                 Delete
               </button>
