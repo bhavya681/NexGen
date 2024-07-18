@@ -10,7 +10,7 @@ import Calculator from "../components/Calculator";
 import { GiCrossedSabres } from "react-icons/gi";
 import { FiFramer } from "react-icons/fi";
 
-const apiKey = import.meta.env.VITE_NEWS_API_KEY;
+const apiKey = import.meta.env.REACT_APP_NEWS_API_KEY;
 const initialUrl = `https://newsapi.org/v2/top-headlines?country=in&apiKey=${apiKey}`;
 
 const HomePage = () => {

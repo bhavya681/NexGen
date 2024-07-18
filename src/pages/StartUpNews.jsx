@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 
-const apiKey = import.meta.env.VITE_NEWS_API_KEY;
+const apiKey = import.meta.env.REACT_APP_NEWS_API_KEY;
 const apiUrl = `https://newsapi.org/v2/everything?q=startups&language=en&sortBy=publishedAt&apiKey=${apiKey}`;
 
 const StartUpNews = () => {
