@@ -45,7 +45,7 @@
 
 import React, { useEffect, useState } from 'react';
 
-const apiKey = import.meta.env.REACT_APP_NEWS_API_KEY; // Ensure you set this in your environment variables
+const apiKey = import.meta.env.VITE_NEWS_API_KEY; // Ensure you set this in your environment variables
 const apiUrl = `https://newsapi.org/v2/everything?q=tesla&language=en&sortBy=publishedAt&apiKey=${apiKey}`;
 
 const TeslaNewsPage = () => {

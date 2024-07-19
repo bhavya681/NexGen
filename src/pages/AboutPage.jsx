@@ -75,7 +75,7 @@
 import React, { useEffect, useState } from 'react';
 import InfiniteScroll from 'react-infinite-scroll-component';
 
-const apiKey = import.meta.env.REACT_APP_NEWS_API_KEY;
+const apiKey = import.meta.env.VITE_NEWS_API_KEY;
 const initialUrl = `https://newsapi.org/v2/everything?q=car&apiKey=${apiKey}`;
 
 const CarUpdatesPage = () => {

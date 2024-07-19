@@ -10,8 +10,8 @@ import Calculator from "../components/Calculator";
 import { GiCrossedSabres } from "react-icons/gi";
 import { FiFramer } from "react-icons/fi";
 
-const apiKey = import.meta.env.REACT_APP_NEWS_API_KEY;
-const initialUrl = `https://newsapi.org/v2/top-headlines?country=in&apiKey=${apiKey}`;
+const apiKey = import.meta.env.VITE_NEWS_API_KEY;
+const initialUrl = `http://newsapi.org/v2/top-headlines?country=in&apiKey=${apiKey}`;
 
 const HomePage = () => {
   const [articles, setArticles] = useState([]);
@@ -69,9 +69,15 @@ const HomePage = () => {
   };
 
   const handleSearch = async (query) => {
-    const searchUrl = `https://newsapi.org/v2/everything?q=${query}&apiKey=${apiKey}`;
+    const searchUrl = `http://newsapi.org/v2/everything?q=${
+      query ? query : "darkweb"
+    }&apiKey=${apiKey}`;
     fetchArticles(searchUrl);
   };
+
+  useEffect(() => {
+    handleSearch();
+  }, []);
 
   const toggleSidebar = () => {
     setIsSidebarOpen(!isSidebarOpen);
@@ -209,29 +215,3 @@ const HomePage = () => {
 };
 
 export default HomePage;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
